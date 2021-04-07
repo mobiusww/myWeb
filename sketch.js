@@ -66,10 +66,10 @@ function f_alarm() {
 
   if (noseY >= (thresHD + thresBuffer)) {
     sound_alarm.play();
-    textSize(60);
+    textSize(50);
     fill(0);
 
-    text('SIT STRAIGHT!!', 100, thresHD + thresBuffer+100);
+    text('SIT STRAIGHT!!', 50, thresHD + thresBuffer+100);
   } else {
     sound_alarm.pause();
   }
