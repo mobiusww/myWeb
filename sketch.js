@@ -57,13 +57,19 @@ function draw() {
     f_alarm();
   }
   fill(0)
+  textSize(12);
   text('Set Buffer Zone', sld_thresBuffer.x + 8 , sld_thresBuffer.height+12);
+
 }
 
 function f_alarm() {
 
   if (noseY >= (thresHD + thresBuffer)) {
     sound_alarm.play();
+    textSize(60);
+    fill(0);
+
+    text('SIT STRAIGHT!!', 100, thresHD + thresBuffer+100);
   } else {
     sound_alarm.pause();
   }
